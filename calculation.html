@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Live Virtual Classes</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="./js/calculation.js"></script>
+    <style>
+      section {
+        background-color: antiquewhite;
+        margin: 5%;
+        padding: 50px;
+        border-radius: 25px;
+        width: 90%;
+      }
+      td {
+        padding-right: 5px;
+        padding-left: 2px;
+      }
+      tr{
+        width: 100%;
+      }
+      tr,
+      td {
+        padding-bottom: 10px;
+      }
+    </style>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div>
+      <header>
+        <div
+          id="carouselExampleControls"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="./images/4148946552.png"
+                class="d-block w-100"
+                alt="..."
+              />
+              <div class="carousel-caption">
+                <canvas id="myCanvas1" width="475" height="100"
+                  >Browser does not support canvas</canvas
+                >
+                <script>
+                  var c = document.getElementById("myCanvas1");
+                  var ctx = c.getContext("2d");
+                  ctx.font = "50px Arial";
+
+                  const gradient1 = ctx.createLinearGradient(0, 0, c.width, 0);
+                  gradient1.addColorStop("0", "yellow");
+                  gradient1.addColorStop("0.5", "orange");
+                  gradient1.addColorStop("1.0", "red");
+
+                  // Fill with gradient
+                  ctx.fillStyle = gradient1;
+                  ctx.fillText("Live Virtual Classes", 10, 90);
+                </script>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./images//305002075.png"
+                class="d-block w-100"
+                alt="..."
+              />
+              <div class="carousel-caption">
+                <canvas id="myCanvas2" width="475" height="100"
+                  >Browser does not support canvas</canvas
+                >
+                <script>
+                  var c = document.getElementById("myCanvas2");
+                  var ctx = c.getContext("2d");
+                  ctx.font = "50px Arial";
+
+                  const gradient2 = ctx.createLinearGradient(0, 0, c.width, 0);
+                  gradient2.addColorStop("0", "magenta");
+                  gradient2.addColorStop("0.5", "blue");
+                  gradient2.addColorStop("1.0", "red");
+
+                  // Fill with gradient
+                  ctx.fillStyle = gradient2;
+                  ctx.fillText("Live Virtual Classes", 10, 90);
+                </script>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./images/4060066699.png"
+                class="d-block w-100"
+                alt="..."
+              />
+              <div class="carousel-caption">
+                <canvas id="myCanvas3" width="475" height="100"
+                  >Browser does not support canvas</canvas
+                >
+                <script>
+                  var c = document.getElementById("myCanvas3");
+                  var ctx = c.getContext("2d");
+                  ctx.font = "50px Arial";
+                  ctx.strokeText("Live Virtual Classes", 30, 90);
+                </script>
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleControls"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+        <!-- <h1>Live Virtual Classes</h1> -->
+      </header>
+      <nav>
+        <ul>
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="courses.html">All Courses</a></li>
+          <li><a href="registration.html">Registration</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="calculation.html">LVC Result</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="#" onclick="subscribe()">Subscription</a></li>
+          <li><a href="#" onclick="openTest()">Online Test</a></li>
+          <li>
+            <select
+              class="form-select"
+              selected
+              onchange="openDetails()"
+              id="dropdown"
+            >
+              <option>Search a Course</option>
+              <option value="mern">MERN</option>
+              <option value="mean">MEAN</option>
+              <option value="mevn">MEVN</option>
+            </select>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h3>Student Result</h3>
+        <div>
+          <table>
+            <tr>
+              <td>Name</td>
+              <td><input type="text" id="name" /></td>
+            </tr>
+            <tr>
+              <td>Marks:</td>
+            </tr>
+            <tr>
+              <td>Mathematics</td>
+              <td><input type="text" id="m" /></td>
+              <td>Computer Science</td>
+              <td><input type="text" id="cs" /></td>
+              <td>Science</td>
+              <td><input type="text" id="s" /></td>
+            </tr>
+            <tr></tr>
+            <tr></tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>
+                <input type="button" onclick="calculate()" value="Result" />
+              </td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Total marks:</td>
+              <td id="tm"></td>
+            </tr>
+
+            <tr>
+              <td>Percentage:</td>
+              <td id="per"></td>
+            </tr>
+
+            <tr>
+              <td>Max. Marks</td>
+              <td id="max"></td>
+            </tr>
+          </table>
+        </div>
+      </section>
+
+      <footer>
+        <p>Designed & developed by: Divya</p>
+      </footer>
+    </div>
+  </body>
+</html>
