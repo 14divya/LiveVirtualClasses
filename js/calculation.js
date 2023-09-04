@@ -5,21 +5,17 @@ function calculate(){
     var tm = document.getElementById("tm");
     var per = document.getElementById("per");
     var max = document.getElementById("max");
-
-    
-    
-    
     var total = eval(m)+eval(cs)+eval(s);
-    tm.textContent = total;
+    tm.value = total;
     var percentage = total/3;
-    per.textContent = percentage+" %";
+    per.value = percentage+" %";
     if(eval(m) > eval(cs) && eval(m) > eval(s)){
-        max.textContent = m;
+        max.value = m;
     }
     else if(eval(cs) > eval(s)){
-        max.textContent = cs;
+        max.value = cs;
     }
     else{
-        max.textContent = s;
+        max.value = s;
     }
 }
