@@ -45,10 +45,11 @@ canvas {
 }
 
 footer {
-    margin-top: 400px;
+    width: 100%;
     background-color: gray;
-    padding: 5px;
-    height: 200px;
+    padding: 10px;
+    text-align: center;
+    color: white;
 }
 
 img {
