@@ -34,6 +34,8 @@ a:hover {
 nav {
     background: linear-gradient(#ff7f50, yellow);
     padding: 2px;
+    border-bottom: 5px solid lightgreen;
+ 
 }
 
 canvas {
@@ -50,6 +52,7 @@ footer {
     padding: 10px;
     text-align: center;
     color: white;
+    border-top: 5px solid lightgreen;
 }
 
 img {

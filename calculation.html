@@ -7,12 +7,16 @@
     <link rel="stylesheet" href="css/style.css" />
     <script src="./js/calculation.js"></script>
     <style>
+      input.form-control{
+        border: 1px solid black;
+      }
       section {
-        background-color: antiquewhite;
+        background-color: white;
         margin: 5%;
         padding: 50px;
         border-radius: 25px;
         width: 90%;
+        border: 1px solid red;
       }
       td {
         padding-right: 5px;
@@ -39,7 +43,7 @@
     ></script>
   </head>
   <body>
-    <div>
+    <div style="background-color: lightgoldenrodyellow;">
       <header>
         <div
           id="carouselExampleControls"
@@ -168,21 +172,26 @@
       </nav>
       <section>
         <h3>Student Result</h3>
+        <br>
         <div>
           <form>
             <div class="form-group row">
-              <label for="staticEmail" class="col-sm-2 col-form-label"
+              <div class="col-md-2">
+              <label for="staticEmail" class="col-form-label"
                 >Name</label
               >
+            </div>
               <div class="col-sm-4">
                 <input type="text" class="form-control" id="name" />
               </div>
             </div>
+            <br>
             <div class="form-group row">
               <label for="inputPassword" class="col-sm-2 col-form-label"
                 >Marks</label
               >
             </div>
+            <br>
             <div class="form-group row">
               <label for="inputPassword" class="col-sm-2 col-form-label"
                 >Mathematics</label
@@ -203,6 +212,7 @@
                 <input type="text" class="form-control" id="s" />
               </div>
             </div>
+            <br>
             <div
               class="form-group row col-sm-2"
               style="padding-bottom: 2%; margin-left: 45%"
@@ -216,6 +226,9 @@
                 Check Result
               </button>
             </div>
+            <br>
+            <hr>
+            <br>
             <div class="form-group row">
               <label for="staticEmail" class="col-sm-2 col-form-label"
                 >Total Marks</label
