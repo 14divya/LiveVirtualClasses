@@ -81,7 +81,7 @@ function countDown() {
   var timex = document.getElementById("demo");
   timex.classList.remove('btn-info');
   timex.classList.add('btn-warning');
-  var j = 12;
+  var j = 62;
   var time = setInterval(function () {
     timex.innerHTML = (j-2) + " secs";
     j--;
